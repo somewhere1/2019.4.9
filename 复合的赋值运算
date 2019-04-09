@@ -1,0 +1,45 @@
+涉及算术运算的复合赋值运算符有5个：
+运算符     例    子      等价形式
+ +=       a += b;       a = a+b
+ -=       a -=b;        a = a-b
+ *=       a *=b;        a = a*b
+ /=       a /=b;        a = a/b
+ %=       a %=b;        a = a%b
+  
+  思考题：已知变量a=3，请问分别执行下面两个语句
+  a += a -= a*a     a=-12;
+  a += a -= a*= a    a=0;
+  注：
+  4a*a与a*=a的区别在于后者增加了将a*a赋值给a的操作
+  增1和减1运算符
+  前缀 ++n  变量使用前对其进行加1操作
+  后缀 n++  先使用变量的当前值，再对其进行加1操作
+  
+  宏常量与宏定义
+  #include<stdio.h>
+  main()
+  {
+       double r
+       printf("Input n:");
+       scanf("%f",&n);
+       printf("circumference = %f\n",2*3.14159*r);
+       printf("area = %f\n",3.14159*r*r);
+  }
+  3.14159 这种直接使用的常数成为幻数，会带来很多麻烦和问题：
+  1.可读性变差，运行一段时间后程序自己都不知道自己在运行什么
+  2.很容易写错
+  3.改变幻数时，很容易改错。
+  所以可以把幻数定义为宏常量和常数常量
+  例  #include<stdio.h>
+      #define PI 3.1415926
+  main()
+  
+  {
+       double r
+       printf("Input n:");
+       scanf("%f",&n);
+       printf("circumference = %f\n",PI*r);
+       printf("area = %f\n",PI*r*r)
+  
+   }
+
